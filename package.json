@@ -18,7 +18,8 @@
   "license": "MIT",
   "scripts": {
     "start": "browser-sync start --server --no-ui --files \"js/**/*.js\"",
-    "lint": "eslint js/"
+    "lint": "eslint js/",
+    "build": "mkdir -p dist && cp -r index.html favicon.ico css fonts img photos dist/ && cp -r js dist/ && cp -r vendor dist/ 2>/dev/null || :"
   },
   "engines": {
     "node": "24",
